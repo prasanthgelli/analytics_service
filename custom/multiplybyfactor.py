@@ -10,7 +10,7 @@ from iotfunctions.base import BaseTransformer
 from iotfunctions import ui
 
 
-PACKAGE_URL = 'git+https://github.com/prasanthgelli/analytics_service/functions@'
+PACKAGE_URL = 'git+https://github.com/prasanthgelli/analytics_service/multiplybyfactor@'
 
 class MultiplyByFactor(BaseTransformer):
 
