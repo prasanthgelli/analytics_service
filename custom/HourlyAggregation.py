@@ -39,24 +39,23 @@ class PIRHourlyAgg(BaseAggregator):
     '''
     Demonstration a hourly aggregation
     '''
-	def __init__(self, input_item, output_item):
+    def __init__(self, input_item, output_item):
         self.input_item = input_item
         self.output_item = output_item
         super().__init__()
 
-    def aggregate(self, df):
-        df = df.copy()
+    def _calc(self, df):
+        sql="select MOTION from IOT_PIR_MOTION where RCV_TIMESTAMP_UTC > '2019-09-11 05:00:00.000'"
         bdl = BaseDatabaseLookup(
              lookup_table_name = 'IOT_PIR_MOTION',
              lookup_keys= ['MOTION'],
              lookup_items = ['MOTION'],
-             sql="select * from IOT_PIR_MOTION where RCV_TIMESTAMP_UTC > '2019-09-02 05:00:00.000'"
+             sql=sql		 
              )
-        pdf = bd1.execute()
-        print(pdf)        
-        df[self.output_item] = df[self.input_item] * df[self.input_item]
+        pdf = bdl.execute(df=None)
+        df[self.output_item] = df[self.input_item].min()
         return df
-    
+		
     @classmethod
     def build_ui(cls):
 
