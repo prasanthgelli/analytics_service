@@ -32,7 +32,7 @@ This module contains a number of sample functions.
 
 logger = logging.getLogger(__name__)
 
-PACKAGE_URL = 'git+https://github.com/prasanthgelli/analytics_service@@starter_package'
+PACKAGE_URL = 'git+https://github.com/prasanthgelli/analytics_service@master'
     
     
 class PIRHourlyAgg(BaseAggregator):
