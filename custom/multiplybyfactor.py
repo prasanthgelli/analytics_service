@@ -6,7 +6,7 @@ from sqlalchemy.sql.sqltypes import TIMESTAMP,VARCHAR
 import numpy as np
 import pandas as pd
 
-from iotfunctions.base import BaseTransformer
+from iotfunctions.base import BaseTransformer,BaseComplexAggregator
 from iotfunctions import ui
 
 
