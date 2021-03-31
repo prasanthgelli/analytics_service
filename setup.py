@@ -17,7 +17,7 @@ setup(
          'urllib3==1.22',
          'ibm_db==3.0.1',
          'ibm_db_sa==0.3.3',
-         'lxml==4.3.4',
+         'lxml==4.6.3',
          'nose>=1.3.7',
          'psycopg2-binary==2.8.4',
          'pyod==0.7.5',
