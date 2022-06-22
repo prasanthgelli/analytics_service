@@ -9,7 +9,7 @@ setup(
      install_requires=[
          'dill==0.3.0',
          'ibm-cos-sdk==2.1.3',
-         'numpy==1.18.2',
+         'numpy==1.22.0',
          'pandas>=0.25.3',
          'scikit-learn==0.20.3',
          'scipy>=1.1.0',
